@@ -23,6 +23,10 @@ app.get("/" , (req,res)=>{
 
 io.on("connection" , function(uniqueSocket){
     console.log("connected")
+
+    uniqueSocket.on("shyam",function(){
+        console.log("received")
+    })
 })
 
 server.listen(3000 , function(){
